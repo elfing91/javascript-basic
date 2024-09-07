@@ -6,13 +6,9 @@ const h1 = document.querySelector("div.hello:first-child h1")
 
 function handleTitleClick() {// 클릭이벤트 시 색깔변화  함수
    const clickedClass="clicked"//raw value사용시 발생가능한 에러 방지
-
-    if (h1.classList.contains(clickedClass)) { //h1의 클래스명이 clicked(빨강)면 비우기=>파란색으로 만들기
-        h1.classList.remove(clickedClass);
-    } else {
-        h1.classList.add(clickedClass);
-        //h1의 classList에 classname이 포함되었으면 제거하고 없으면 추가
-    }
+    h1.classList.toggle(clickedClass) 
+    //토글은 h1의 classList에 clicked 클래스가 있는지 확인해 있으면 없애고 없으면 추가
+   
 }
 
 
