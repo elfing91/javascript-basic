@@ -13,16 +13,25 @@ function handleTitleClick() {// 클릭이벤트 시 색깔변화  함수
 }
 
 function handleMouseEnter() { //title메 마우스 올릴 때 이벤트 함수
-    title.innerHTML = "mouse is here"
+    title.innerText = "mouse is here"
 }
 function handleMouseLeave() {//title에 마우스 뗄때 이벤트 함수
-    title.innerHTML = "mouse is not here"
+    title.innerText = "mouse is not here"
 }
 
-title.addEventListener("click", handleTitleClick)
+function handleWindowResize(){//윈도우의 사이즈변경 이벤트시 함수-배경색 변경
+    document.body.style.backgroundColor="tomato"
+}
+
+function handleWindowCopy(){//문자 복사 이벤트 시 함수--알림창 출력
+    alert("copied!")
+}
+
+title.onclick=handleTitleClick //아래와 같은 기능 수행
+//title.addEventListener("click", handleTitleClick)
 title.addEventListener("mouseenter", handleMouseEnter)
 title.addEventListener("mouseleave", handleMouseLeave)
 
-//title에 eventListener추가+ function을 두번쨰 인수(argument)에 전달
 
-//자바스크립트에 function을 전달해 유저가 title을 클릭하면 자바스크립트가 나 대신 실행버튼을 누르게 함
+window.addEventListener("resize",handleWindowResize)
+window.addEventListener("copy",handleWindowCopy)
