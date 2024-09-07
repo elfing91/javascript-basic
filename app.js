@@ -1,20 +1,13 @@
-function sayHello(name, age){//이름/나이출력함수
-    console.log("h1, "+name+" and my age is "+age)
-}
-sayHello("nico",10)
+const title=document.querySelector(".hello:first-child h1")
+//class hello를 가진 div내부의 first자식인 h1찾기
+//=>HTML element를 자바스크립트로 가져오기
 
-function plus(a,b){// 더하기 함수
-    let result=a+b
-    console.log(a+"+"+b+"="+result)
-}
+//첫번째 자식 h1의 스타일을 자바스크립트에서 변경하기
 
-plus(3,6)
-plus(-2,0)
+function handleTitleClick(){
+    title.style.color = "blue";}
 
-const player={ //이름,나이출력 함수를 포함한 오브젝트 선언
-    sayHello: function(name, age){
-        console.log("h1, "+name+" and my age is "+age)
-    }
-}
+title.addEventListener("click", handleTitleClick)
+//title에 eventListener추가+ function을 두번쨰 인수(argument)에 전달
 
-player.sayHello("nico",10)
+//자바스크립트에 function을 전달해 유저가 title을 클릭하면 자바스크립트가 나 대신 실행버튼을 누르게 함
