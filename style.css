@@ -1,13 +1,13 @@
-body{
+body {
     background-color: aliceblue;
 }
 
-h1{
-    color:cornflowerblue;
-    transition:color .5s ease-in-out;
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: cornflowerblue;
+    transition: color .5s ease-in-out;
 }
 
 .clicked {
-    
     color: tomato;
 }
