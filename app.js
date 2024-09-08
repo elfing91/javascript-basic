@@ -1,18 +1,13 @@
+const loginForm=document.querySelector("#login-form")
 
 const loginInput=document.querySelector("#login-form input")
 const loginButton=document.querySelector("#login-form button")
 
-function onLoginClick(){//버튼 클릭 이벤트 함수
+function onLoginSubmit(){//로그인 제출시 이벤트 함수
    
     const value=loginInput.value;
-
-    if(value==""){
-        alert("write")
-    }else if(value.length>15){/// 글자수가 15이상이면 에러창 출력
-        alert("too long")     
-    }else{
-        console.log(value)
-    }
+    console.log(value)
 }
 
-loginButton.addEventListener("click",onLoginClick)
+loginForm.addEventListener("submit",onLoginSubmit)
+//form의 submit이벤트를 감지=>입력값 출력함
